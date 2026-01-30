@@ -617,7 +617,7 @@ const [user, setUser] = useState<AppUser | null>(null);
                         <Label htmlFor="gender" className="text-amber-800">
                           Gender (Optional)
                         </Label>
-                        <Select onValueChange={(value) => handleInputChange("gender", value)}>
+                        <Select onValueChange={(value: string | boolean) => handleInputChange("gender", value)}>
                           <SelectTrigger className="mt-1 border-amber-200">
                             <SelectValue placeholder="Select gender" />
                           </SelectTrigger>
@@ -746,7 +746,7 @@ const [user, setUser] = useState<AppUser | null>(null);
                         <Label htmlFor="howDidYouHear" className="text-amber-800">
                           How did you hear about us?
                         </Label>
-                        <Select onValueChange={(value) => handleInputChange("howDidYouHear", value)}>
+                        <Select onValueChange={(value: string | boolean) => handleInputChange("howDidYouHear", value)}>
                           <SelectTrigger className="mt-1 border-amber-200">
                             <SelectValue placeholder="Select an option" />
                           </SelectTrigger>
@@ -763,7 +763,7 @@ const [user, setUser] = useState<AppUser | null>(null);
                         <Checkbox
                           id="receiveUpdates"
                           checked={formData.receiveUpdates}
-                          onCheckedChange={(checked) => handleInputChange("receiveUpdates", checked as boolean)}
+                          onCheckedChange={(checked: boolean) => handleInputChange("receiveUpdates", checked as boolean)}
                           className="border-amber-400 data-[state=checked]:bg-amber-700"
                         />
                         <Label htmlFor="receiveUpdates" className="text-amber-800 cursor-pointer">
@@ -774,7 +774,7 @@ const [user, setUser] = useState<AppUser | null>(null);
                         <Checkbox
                           id="joinCommunity"
                           checked={formData.joinCommunity}
-                          onCheckedChange={(checked) => handleInputChange("joinCommunity", checked as boolean)}
+                          onCheckedChange={(checked: boolean) => handleInputChange("joinCommunity", checked as boolean)}
                           className="border-amber-400 data-[state=checked]:bg-amber-700"
                         />
                         <Label htmlFor="joinCommunity" className="text-amber-800 cursor-pointer">
@@ -888,7 +888,7 @@ const [user, setUser] = useState<AppUser | null>(null);
                     <Checkbox
                       id="agreeTerms"
                       checked={formData.agreeTerms}
-                      onCheckedChange={(checked) => handleInputChange("agreeTerms", checked as boolean)}
+                      onCheckedChange={(checked: boolean) => handleInputChange("agreeTerms", checked as boolean)}
                       className="border-amber-400 data-[state=checked]:bg-amber-700 mt-1"
                     />
                     <Label htmlFor="agreeTerms" className="text-amber-800 cursor-pointer font-semibold">

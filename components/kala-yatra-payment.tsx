@@ -89,7 +89,7 @@ export default function KalaYatraPayment({ registrationId, onPaymentComplete }: 
           table: 'payments',
           filter: `registration_id=eq.${registrationId}`,
         },
-        (payload) => {
+        (payload: { new: { status: string; }; }) => {
           console.log('[v0] Payment status update received:', payload.new);
           if (payload.new.status === 'verified') {
             setPaymentStatus('success');

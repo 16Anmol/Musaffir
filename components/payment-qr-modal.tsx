@@ -148,7 +148,7 @@ export default function PaymentQRModal({
               <Checkbox
                 id="payment-confirm"
                 checked={hasPaid}
-                onCheckedChange={(checked) => setHasPaid(checked as boolean)}
+                onCheckedChange={(checked: boolean) => setHasPaid(checked as boolean)}
               />
               <label
                 htmlFor="payment-confirm"

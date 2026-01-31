@@ -194,14 +194,14 @@ export default function TripsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen bg-linear-to-br from-amber-50 via-orange-50 to-yellow-50">
       <Header />
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="/https://www.colorpalettestore.com/cdn/shop/products/744D40.png?v=1614624668" alt="" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-900/80 to-orange-900/60" />
+          <div className="absolute inset-0 bg-linear-to-rrom-amber-900/80 to-orange-900/60" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center text-white">
@@ -352,7 +352,7 @@ export default function TripsPage() {
                   setPriceRange([0, 25000])
                   setShowFeaturedOnly(false)
                 }}
-                className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700"
+                className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700"
               >
                 Clear Filters
               </Button>
@@ -377,7 +377,7 @@ export default function TripsPage() {
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-amber-900/60 to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-amber-900/60 to-transparent" />
 
                       {/* Badges */}
                       <div className="absolute top-4 left-4 flex flex-col gap-2">
@@ -432,7 +432,7 @@ export default function TripsPage() {
                       </div>
                     </div>
 
-                    <CardContent className="p-6 bg-gradient-to-b from-white to-amber-50">
+                    <CardContent className="p-6 bg-linear-to-b from-white to-amber-50">
                       <div className="flex items-start justify-between mb-2">
                         <h3 className="text-xl font-bold text-amber-900 group-hover:text-amber-700 transition-colors">
                           {trip.title}
@@ -486,7 +486,7 @@ export default function TripsPage() {
                           <span className="text-md text-amber-600">Coming Soon</span>
                         </div>
                         {/*<Link href={`https://docs.google.com/forms/d/e/1FAIpQLSfuaVHKTPrVyDdzykMZVL6jTPD1xdgiMDmlSRoq2sGi1mcACg/viewform?usp=sharing&ouid=100832964902746238927`}> */}
-                          <Button className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white">
+                          <Button className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white">
                             Register
                           </Button>
                       

@@ -8,31 +8,23 @@ export const getAuthClient = () => {
 };
 
 export const signInWithGoogle = async () => {
-  try {
-    const supabase = getAuthClient();
-    const redirectUrl = `${window.location.origin}/auth/callback`;
-    console.log('[v0] OAuth redirect URL:', redirectUrl);
-    
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: redirectUrl,
-        scopes: 'profile email',
-        queryParams: {
-          access_type: 'offline',
-          prompt: 'consent',
-        },
-      },
-    });
-    
-    console.log('[v0] OAuth response:', { data, error });
-    
-    if (error) {
-      console.error('[v0] OAuth error:', error);
-      throw error;
-    }
-  } catch (error) {
-    console.error('[v0] Sign in with Google error:', error);
+  const supabase = getAuthClient();
+
+  const redirectTo =
+    process.env.NODE_ENV === "production"
+      ? "https://musaffir.vercel.app"
+      : "http://localhost:3000";
+
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo,
+      scopes: "profile email",
+    },
+  });
+
+  if (error) {
+    console.error("[v0] OAuth error:", error);
     throw error;
   }
 };

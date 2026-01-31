@@ -70,7 +70,7 @@ const handleSubscribe = async () => {
 
   return (
     
-    <footer className="bg-gradient-to-br from-amber-900 via-orange-900 to-yellow-900 text-white">
+    <footer className="bg-linear-to-br from-amber-900 via-orange-900 to-yellow-900 text-white">
       {/* Newsletter Section */}
       <div className="border-b border-amber-700">
         <div className="max-w-7xl mx-auto px-4 py-12">
@@ -95,7 +95,7 @@ const handleSubscribe = async () => {
 <Button
   onClick={handleSubscribe}
   disabled={loading}
-  className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 whitespace-nowrap border-2 border-amber-500"
+  className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 whitespace-nowrap border-2 border-amber-500"
 >
   {loading ? "Subscribing..." : "Subscribe"}
 </Button>
@@ -193,7 +193,7 @@ const handleSubscribe = async () => {
               })}
             </div>
             <Link href="/trips">
-              <Button className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 border-2 border-amber-500">
+              <Button className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 border-2 border-amber-500">
                 <Plane className="h-4 w-4 mr-2" />
                 Start Your Journey
               </Button>

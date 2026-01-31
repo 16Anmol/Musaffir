@@ -19,7 +19,7 @@ export default function AuthPage() {
       const user = await getUser();
       if (user) {
         router.push('/kala-yatra/dashboard');
-      }
+      } 
     };
     checkAuth();
   }, [router]);

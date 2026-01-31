@@ -78,14 +78,14 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen bg-linear-to-br from-amber-50 via-orange-50 to-yellow-50">
       <Header />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="/home_bg.jpg" alt="Hero Background" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-900/80 via-orange-900/70 to-yellow-900/60" />
+          <div className="absolute inset-0 bg-linear-to-r from-amber-900/80 via-orange-900/70 to-yellow-900/60" />
         </div>
 
         <motion.div
@@ -95,7 +95,7 @@ export default function HomePage() {
           className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto"
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -132,7 +132,7 @@ export default function HomePage() {
             <Button
               size="lg"
               onClick={handleSearch}
-              className="h-12 px-8 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 border-2 border-amber-500"
+              className="h-12 px-8 bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 border-2 border-amber-500"
             >
               <Search className="mr-2 h-5 w-5" />
               Search
@@ -147,7 +147,7 @@ export default function HomePage() {
             <Link href="/trips">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 text-lg border-2 border-amber-500"
+                className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 text-lg border-2 border-amber-500"
               >
                 <Plane className="mr-2 h-5 w-5" />
                 Explore Initiatives
@@ -170,7 +170,7 @@ export default function HomePage() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="px-3 py-7 bg-gradient-to-b from-orange-50 to-yellow-50">
+      <section className="px-3 py-7 bg-linear-to-b from-orange-50 to-yellow-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -204,13 +204,13 @@ export default function HomePage() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-amber-900/60 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-amber-900/60 to-transparent" />
                     <div className="absolute bottom-4 left-4 text-white">
                       <h3 className="text-lg font-semibold">{event.title}</h3>
                     </div>
                   </div>
 
-                  <CardContent className="p-6 bg-gradient-to-b from-white to-amber-50">
+                  <CardContent className="p-6 bg-linear-to-b from-white to-amber-50">
                     <p className="text-amber-800 mb-4">{event.description}</p>
 
                     {event.link ? (
@@ -266,7 +266,7 @@ export default function HomePage() {
       </div>
 
       {/* Mission Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-amber-50 to-orange-50">
+      <section className="py-20 px-4 bg-linear-to-b from-amber-50 to-orange-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -290,7 +290,7 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="p-8 h-full border-2 border-amber-200 shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-b from-white to-amber-50 text-center">
+              <Card className="p-8 h-full border-2 border-amber-200 shadow-lg hover:shadow-xl transition-shadow bg-linear-to-b from-white to-amber-50 text-center">
                 <div className="mb-4">
                   <div className="w-16 h-16 mx-auto bg-amber-100 rounded-full flex items-center justify-center">
                     <span className="text-3xl">🏛️</span>
@@ -309,7 +309,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="p-8 h-full border-2 border-amber-200 shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-b from-white to-amber-50 text-center">
+              <Card className="p-8 h-full border-2 border-amber-200 shadow-lg hover:shadow-xl transition-shadow bg-linear-to-b from-white to-amber-50 text-center">
                 <div className="mb-4">
                   <div className="w-16 h-16 mx-auto bg-amber-100 rounded-full flex items-center justify-center">
                     <span className="text-3xl">🌍</span>
@@ -328,7 +328,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="p-8 h-full border-2 border-amber-200 shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-b from-white to-amber-50 text-center">
+              <Card className="p-8 h-full border-2 border-amber-200 shadow-lg hover:shadow-xl transition-shadow bg-linear-to-b from-white to-amber-50 text-center">
                 <div className="mb-4">
                   <div className="w-16 h-16 mx-auto bg-amber-100 rounded-full flex items-center justify-center">
                     <span className="text-3xl">🎨</span>
@@ -345,7 +345,7 @@ export default function HomePage() {
       </section>
 
       {/* Calendar Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-yellow-50 to-amber-50">
+      <section className="py-20 px-4 bg-linear-to-b from-yellow-50 to-amber-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="flex flex-col lg:flex-row items-center gap-12"
@@ -377,7 +377,7 @@ export default function HomePage() {
                 <Link href="/contact">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8"
+                    className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8"
                   >
                     Get Involved
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -390,7 +390,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4 bg-gradient-to-b from-amber-50 to-orange-50">
+      <section className="py-20 px-4 bg-linear-to-b from-amber-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -412,7 +412,7 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6 h-full border-2 border-amber-200 shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-b from-white to-amber-50">
+                <Card className="p-6 h-full border-2 border-amber-200 shadow-lg hover:shadow-xl transition-shadow bg-linear-to-b from-white to-amber-50">
                   <div className="flex items-center gap-4 mb-4">
                     <Image
                       src={testimonial.image || "/placeholder.svg"}
@@ -442,7 +442,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-900 via-orange-900 to-yellow-900 text-white">
+      <section className="py-20 bg-linear-to-r from-amber-900 via-orange-900 to-yellow-900 text-white">
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.div
             className="text-center mb-16"
@@ -461,7 +461,7 @@ export default function HomePage() {
             <Link href="/trips">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 px-8 py-4 text-lg border-2 border-amber-500"
+                className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 px-8 py-4 text-lg border-2 border-amber-500"
               >
                 <Plane className="mr-2 h-5 w-5" />
                 View Initiatives

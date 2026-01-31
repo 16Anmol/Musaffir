@@ -13,7 +13,7 @@ export default function AuthDebugPage() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setRedirectUrl(`${window.location.origin}/auth/callback`);
+      setRedirectUrl(`https://musaffir.vercel.app/`);
     }
   }, []);
 

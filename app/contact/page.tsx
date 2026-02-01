@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["musafir30824@gmail.com"],
+    details: ["musaffir30824@gmail.com"],
     description: "Send us an email and we'll respond within 24 hours",
   },
   {
@@ -41,19 +41,19 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://www.instagram.com/musafir30824/",
+    href: "https://www.instagram.com/musaffir.co/",
     description: "Follow us for travel inspiration",
   },
   {
     name: "Facebook",
     icon: Facebook,
-    href: "https://www.facebook.com/profile.php?id=61578721408947", // Updated placeholder
+    href: "https://www.facebook.com/profile.php?id=61578721408947&rdid=M8dW7nJETx7qew7r&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TLDDhGpM%2F#", // Updated placeholder
     description: "Join our travel community",
   },
   {
     name: "WhatsApp",
     icon: MessageCircle,
-    href: "https://www.instagram.com/anmol_.16/", // Updated placeholder
+    href: "https://wa.me/qr/KYJVUU2Q4JAKN1", // Updated placeholder
     description: "Chat with us instantly",
   },
 ]
@@ -110,14 +110,14 @@ export default function ContactPage() {
   }*/
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen bg-linear-to-br from-amber-50 via-orange-50 to-yellow-50">
       <Header />
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image src="/placeholder.svg?height=600&width=1920" alt="Contact Hero" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-900/80 to-orange-900/60" />
+          <div className="absolute inset-0 bg-linear-to-r from-amber-900/80 to-orange-900/60" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center text-white">
@@ -165,9 +165,9 @@ export default function ContactPage() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="text-center p-6 h-full border-2 border-amber-200 hover:border-amber-400 transition-colors bg-gradient-to-b from-white to-amber-50">
+                  <Card className="text-center p-6 h-full border-2 border-amber-200 hover:border-amber-400 transition-colors bg-linear-to-b from-white to-amber-50">
                     <CardContent className="p-0">
-                      <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-16 h-16 bg-linear-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <Icon className="h-8 w-8 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-amber-900 mb-3">{info.title}</h3>
@@ -187,7 +187,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form and Map */}
-      <section className="py-20 px-4 bg-gradient-to-b from-amber-50 to-orange-50">
+      <section className="py-20 px-4 bg-linear-to-b from-amber-50 to-orange-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -197,7 +197,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="p-8 border-2 border-amber-200 bg-gradient-to-b from-white to-amber-50">
+              <Card className="p-8 border-2 border-amber-200 bg-linear-to-b from-white to-amber-50">
                 <h3 className="text-3xl font-bold text-amber-900 mb-6">Send us a Message</h3>
                 {statusMessage && (
                   <div className="mb-4 p-4 bg-green-100 text-green-800 rounded border border-green-300">
@@ -291,7 +291,7 @@ export default function ContactPage() {
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 border-2 border-amber-500"
+                    className="w-full bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 border-2 border-amber-500"
                   >
                     <Send className="mr-2 h-5 w-5" />
                     {isSubmitting ? "Sending..." : "Send Message"}
@@ -307,7 +307,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="p-8 border-2 border-amber-200 bg-gradient-to-b from-white to-amber-50 h-full">
+              <Card className="p-8 border-2 border-amber-200 bg-linear-to-b from-white to-amber-50 h-full">
                 <h3 className="text-3xl font-bold text-amber-900 mb-6">Find Us</h3>
                 <div className="h-96 rounded-lg overflow-hidden border-2 border-amber-200">
                   <iframe
@@ -363,9 +363,9 @@ export default function ContactPage() {
                   whileHover={{ y: -5 }}
                 >
                   <a href={social.href} target="_blank" rel="noopener noreferrer" className="block">
-                    <Card className="p-6 text-center border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 bg-gradient-to-b from-white to-amber-50 hover:shadow-lg">
+                    <Card className="p-6 text-center border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 bg-linear-to-b from-white to-amber-50 hover:shadow-lg">
                       <CardContent className="p-0">
-                        <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="w-16 h-16 bg-linear-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                           <Icon className="h-8 w-8 text-white" />
                         </div>
                         <h4 className="text-xl font-bold text-amber-900 mb-2">{social.name}</h4>

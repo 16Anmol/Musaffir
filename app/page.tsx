@@ -18,16 +18,18 @@ const upcomingEvents = [
     image: "/card_4.jpg",
     description:
       "Experience the rich cultural heritage of Amritsar through guided heritage walks exploring historical sites and local traditions.",
-    link: "https://surveyheart.com/form/64b8ad4b20dd2664e0e290b4?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAO4c59leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaderSS5efHLqywBkHzz3ZwZ69UeyXffCiIDX-ZL944Pqu793oV4ETSi8Yz-pw_aem_aNKRI4ggPmoo_R8KuKIWCg",
+    detailsLink: "https://surveyheart.com/form/64b8ad4b20dd2664e0e290b4?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAO4c59leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaderSS5efHLqywBkHzz3ZwZ69UeyXffCiIDX-ZL944Pqu793oV4ETSi8Yz-pw_aem_aNKRI4ggPmoo_R8KuKIWCg",
   },
   {
-    id: 2,
-    title: "Kala Yatra 2.0",
-    image: "/image.png",
-    description: "All India Art Competition - Showcasing artistic talents from across the nation. Details coming soon!",
-    link: "/kala-yatra",
-    isInternal: true,
-  },
+  id: 2,
+  title: "Kala Yatra 2.0",
+  image: "/image.png",
+  description:
+    "All India Art Competition - Showcasing artistic talents from across the nation. Where the people of all the age groups will showcase their talent.",
+  detailsLink: "/kala-yatra",
+  registerLink: "/kala-yatra/register",
+  isInternal: true,
+}
 ]
 
 const testimonials = [
@@ -144,7 +146,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
           >
-            <Link href="/trips">
+            <Link href="/kala-yatra">
               <Button
                 size="lg"
                 className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 text-lg border-2 border-amber-500"
@@ -211,28 +213,46 @@ export default function HomePage() {
                   </div>
 
                   <CardContent className="p-6 bg-linear-to-b from-white to-amber-50">
-                    <p className="text-amber-800 mb-4">{event.description}</p>
+  <p className="text-amber-800 mb-4">{event.description}</p>
 
-                    {event.link ? (
-                      event.isInternal ? (
-                        <Link href={event.link} className="flex-1">
-                          <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold">
-                            Learn More
-                          </Button>
-                        </Link>
-                      ) : (
-                        <a href={event.link} target="_blank" rel="noopener noreferrer" className="flex-1">
-                          <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold">
-                            Register Now
-                          </Button>
-                        </a>
-                      )
-                    ) : (
-                      <Button disabled className="w-full bg-gray-400 text-white font-semibold cursor-not-allowed">
-                        Coming Soon
-                      </Button>
-                    )}
-                  </CardContent>
+  <div className="flex gap-3">
+    {/* Learn More */}
+    {event.detailsLink ? (
+      <Link href={event.detailsLink} className="flex-1">
+        <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold">
+          Learn More
+        </Button>
+      </Link>
+    ) : (
+      <Button disabled className="flex-1 bg-gray-400 text-white font-semibold">
+        Coming Soon
+      </Button>
+    )}
+
+    {/* Register Now */}
+    {event.registerLink ? (
+      event.isInternal ? (
+        <Link href={event.registerLink} className="flex-1">
+          <Button className="w-full bg-amber-800 hover:bg-amber-900 text-white font-semibold">
+            Register Now
+          </Button>
+        </Link>
+      ) : (
+        <a
+          href={event.registerLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1"
+        >
+          <Button className="w-full bg-amber-800 hover:bg-amber-900 text-white font-semibold">
+            Register Now
+          </Button>
+        </a>
+      )
+    ) : null}
+  </div>
+</CardContent>
+
                 </Card>
               </motion.div>
             ))}
@@ -458,7 +478,7 @@ export default function HomePage() {
           </motion.div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/trips">
+            <Link href="/kala-yatra">
               <Button
                 size="lg"
                 className="bg-linear-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 px-8 py-4 text-lg border-2 border-amber-500"

@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import type { User as SupabaseUser } from "@supabase/supabase-js";
 import { motion } from "framer-motion"
-import { Menu, User, Search, Globe, Phone, Mail, Plane, LogOut } from "lucide-react"
+import { Menu, User, Search, Phone, Mail, Plane, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Input } from "@/components/ui/input"
@@ -98,7 +98,7 @@ export default function Header() {
               />
             </div>
             <span className={`text-xl font-bold ${isScrolled ? "text-amber-900" : "text-white"}`}>
-              Musaffir
+            
             </span>
           </Link>
           {/* Desktop Navigation */}
@@ -133,25 +133,39 @@ export default function Header() {
             </Button>
 
             {/* Language Selector */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className={`${
-                isScrolled
-                  ? "text-amber-700 hover:text-amber-500 hover:bg-amber-100"
-                  : "text-white hover:text-amber-300 hover:bg-white/10"
-              }`}
-            >
-              <Globe className="h-4 w-4 mr-2" />
-              EN
-            </Button>
+            
 
             {/* Sign In / User Profile Button */}
             {!loadingAuth && (
               user ? (
                 <div className="flex items-center space-x-3">
                   <div className="text-right hidden sm:block">
-                    <p className="text-xs text-amber-700">{user.email}</p>
+                    <div className="relative group">
+  <button className="flex items-center justify-center w-9 h-9 
+                     rounded-full bg-amber-100 hover:bg-amber-200 transition">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-5 text-amber-700"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5.121 17.804A13.937 13.937 0 0112 15c2.5 0 4.847.655 6.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+      />
+    </svg>
+  </button>
+
+  {/* Hover Email */}
+  <div className="absolute right-0 mt-2 hidden group-hover:block
+                  whitespace-nowrap rounded-md bg-gray-900 
+                  px-3 py-1 text-xs text-white shadow-lg">
+    {user.email}
+  </div>
+</div>
                   </div>
                   <Link href="/kala-yatra/dashboard">
                     <Button

@@ -846,7 +846,8 @@ const [user, setUser] = useState<AppUser | null>(null);
                     <ul className="list-disc list-inside space-y-1 text-xs">
                       <li>Results will be declared by professional judges with extensive experience in evaluating art.</li>
                       <li>Judging decisions are final and binding.</li>
-                      <li>Winners will be announced on stage at the conclusion of the competition.</li>
+                      <li>The winners will be announced on our official website after the conclusion of the competition.</li>
+
                     </ul>
                   </div>
 

@@ -34,8 +34,8 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61578721408947" },
-  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/musafir30824/" },
+  { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/profile.php?id=61578721408947&rdid=M8dW7nJETx7qew7r&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17TLDDhGpM%2F#" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/musaffir.co/" },
   { name: "Twitter", icon: Twitter, href: "https://x.com/musaffir_" },
   { name: "YouTube", icon: Youtube, href: "https://youtube.com/" },
 ]

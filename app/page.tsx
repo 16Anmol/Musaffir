@@ -97,12 +97,12 @@ export default function HomePage() {
           className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto"
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold mb-7 leading-[1.3] bg-linear-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Enhancing Global Tourism
+            Enhancing Cultural Heritage
           </motion.h1>
 
           <motion.p
@@ -115,7 +115,7 @@ export default function HomePage() {
           </motion.p>
 
           {/* Enhanced Search Bar */}
-          <motion.div
+       {/*   <motion.div
             className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export default function HomePage() {
               <Search className="mr-2 h-5 w-5" />
               Search
             </Button>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}

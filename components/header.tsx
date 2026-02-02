@@ -119,7 +119,7 @@ export default function Header() {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
             {/* Search Toggle */}
-            <Button
+         {/*<Button
               variant="ghost"
               size="sm"
               onClick={() => setShowSearch(!showSearch)}
@@ -130,7 +130,7 @@ export default function Header() {
               }`}
             >
               <Search className="h-4 w-4" />
-            </Button>
+            </Button> */}
 
             {/* Language Selector */}
             

@@ -133,9 +133,7 @@ export default function KalaYatraPage() {
             <Globe className="h-16 w-16 mx-auto mb-4 text-amber-700" />
             <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Our Mission</h2>
             <p className="text-xl text-amber-700 max-w-3xl mx-auto leading-relaxed">
-              To highlight critical social issues and inspire awareness, empathy, and responsibility through artistic
-              expression. We believe that every artwork tells a story, and every story has the power to influence minds
-              and spark change.
+              To celebrate the soul of India by showcasing its rich cultural tapestry and timeless heritage. We believe that through art, we can honor our traditions, revive our history, and share the enduring spirit of Indian culture with the world.
             </p>
           </motion.div>
         </div>
@@ -187,7 +185,7 @@ export default function KalaYatraPage() {
       </section>
 
       {/* Theme Section */}
-      <section className="py-20 px-4 bg-linear-to-b from-orange-50 to-amber-50">
+      <section className="py-10 px-4 bg-linear-to-b from-orange-50 to-amber-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-12"
@@ -196,33 +194,32 @@ export default function KalaYatraPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Lightbulb className="h-16 w-16 mx-auto mb-4 text-amber-700" />
-            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6">Theme</h2>
-            <p className="text-xl text-amber-700 mb-8">
-              Participants are invited to create artwork based on social issues affecting society, such as:
-            </p>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-2">Theme</h2>
+           
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {themeOptions.map((theme, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <Card className="p-8 border-2 border-amber-200 bg-white shadow-lg hover:shadow-xl transition-all">
-                  <div className="text-center">
-                    <theme.icon className={`h-12 w-12 mx-auto mb-4 ${theme.color}`} />
-                    <p className="text-lg font-semibold text-amber-900">{theme.label}</p>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
+          <div className="grid grid-cols-1 gap-6 mb-8">
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+    whileHover={{ y: -5 }}
+  >
+    <Card className="p-10 border-2 border-amber-200 bg-white shadow-lg hover:shadow-xl transition-all">
+      <div className="text-center">
+        <Lightbulb className="h-14 w-14 mx-auto mb-4 text-amber-700 animate-pulse" />
+        <p className="text-xl font-semibold text-amber-900">
+          Theme will be announced on the day of competition
+        </p>
+        <p className="text-sm text-amber-700 mt-2">
+          Stay tuned for an exciting reveal ✨
+        </p>
+      </div>
+    </Card>
+  </motion.div>
+</div>
           <motion.div
             className="text-center mt-8"
             initial={{ opacity: 0 }}
